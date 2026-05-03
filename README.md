@@ -6,11 +6,18 @@ The primary goal is to forecast the 'GHI' (a measure of solar radiation) using a
 
 The workflow consists of:
 
-Data Loading and Preprocessing: Ingesting and cleaning the solar_weather.csv dataset.
-Feature Engineering: Creating new features from existing data to improve model performance (e.g., cyclical time features).
-Data Transformation: Applying a Yeo-Johnson power transform to the target variable to stabilize variance and handling non-normality. Features are scaled to a [0, 1] range.
-Hyperparameter Tuning: Using Optuna to systematically find the optimal model architecture and training parameters.
-Model Training: Training the final LSTM model on a dedicated GPU (mps or cuda) with a cosine annealing learning rate scheduler and early stopping.
+1. Data Loading and Preprocessing:
+Plant_1_Generation_Data.csv
+Plant_1_Weather_Sensor_Data.csv
+Plant_2_Generation_Data.csv
+Plant_2_Weather_Sensor_Data.csv dataset.
+2. Merge Dataset
+3. Feature Engineering
+4. Scaling
+5. Data Exploration (EDA)
+6. Train-Test Split
+Hyperparameter Tuning
+Model Training: Training the final LSTM model on a dedicated GPU
 Model Evaluation: Assessing the model's performance on a held-out test set using metrics like R², RMSE, and MAE.
 Uncertainty Estimation: Using Monte Carlo (MC) Dropout during inference to quantify the model's prediction uncertainty.
 
