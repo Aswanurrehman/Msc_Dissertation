@@ -16,10 +16,10 @@ Plant_2_Weather_Sensor_Data.csv dataset.
 4. Scaling
 5. Data Exploration (EDA)
 6. Train-Test Split
-Hyperparameter Tuning
-Model Training: Training the final LSTM model on a dedicated GPU
-Model Evaluation: Assessing the model's performance on a held-out test set using metrics like R², RMSE, and MAE.
-Uncertainty Estimation: Using Monte Carlo (MC) Dropout during inference to quantify the model's prediction uncertainty.
+7. Hyperparameter Tuning
+8. Model Training: Training the final LSTM model on a dedicated GPU
+9. Model Evaluation: Assessing the model's performance on a held-out test set using metrics like R², RMSE, and MAE.
+10. Uncertainty Estimation: Using Monte Carlo (MC) Dropout during inference to quantify the model's prediction uncertainty.
 
 # Methodology
 ## Data Preparation
@@ -62,8 +62,8 @@ Dense(1)
 
 optimizer='adam', loss='mse')
 
-epochs=20,
-batch_size=32,
+epochs=20
+batch_size=32
 validation_split=0.2)
 
 # Model Performance Comparison
